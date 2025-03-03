@@ -4,12 +4,25 @@ function MediaPanel(props) {
     const { mouseDataChannel, keyboardDataChannel } = props;
 
 	const componentStyle = {
-        backgroundColor: 'lightGrey'
+        backgroundColor: "lightGrey",
+  		width: "750px",
+  		height: "750px",
+  		borderRadius: "50%",
+  		overflow: "hidden",
+  		position: "fixed", // Changed from relative to fixed
+  		top: "50%",
+  		left: "50%",
+ 		 transform: "translate(-50%, -50%)",
     }
 
     const videoStyle = {
-        transform: 'scaleX(-1)',
-		width: '100%'
+		position: "absolute",
+  		top: "50%",
+  		left: "50%",
+  		width: "750px",       // Force the video to be 750px wide
+  		height: "750px",      // Force the video to be 750px high
+  		transform: "translate(-50%, -50%) scaleX(-1)",
+  		objectFit: "cover", 
     }
 
 	// Send data on both mouse down and move to mock interactions on TD leapPaint

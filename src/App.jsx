@@ -13,8 +13,8 @@ import SignalingClient from "./utils/signalingClient";
 
 function App() {
 	// App state management à la React
-	const [port, setPort] = useState(443);
-	const [address, setAddress] = useState("wss://127.0.0.1");
+	const [port, setPort] = useState(877);
+	const [address, setAddress] = useState("ws://127.0.0.1");
 	const [webSocketClients, setWebSocketClients] = useState([]);
 	const [connectedToServer, setConnectedToServer] = useState(false);
 	const [mouseDataChannel, setMouseDataChannel] = useState();
@@ -53,7 +53,7 @@ function App() {
 	return (
 		<Container id="tdApp" maxWidth="xl">
 			<CssBaseline />
-			<h1>TD WebRTC Web Demo 🍌</h1>
+			{/* <h1>TD WebRTC Web Demo 🍌</h1> */}
 			<Grid container spacing={{ xl: 2 }} columns={{ xl: 1 }}>
 				<SignalingClientPanel
 					address={address}
