@@ -66,22 +66,24 @@ function SignalingClientPanel(props) {
       	}
     : { display: "none" };
 
-	// --- NEW: Define style for the floating toggle button ---
-	const toggleButtonStyle = {
-		position: "fixed",
-		bottom: "64px",
-		right: "18px",
-		width: "36px",
-		height: "36px",
-		borderRadius: "4px",
-		backgroundColor: "rgba(0, 0, 0, 0.06)",
-		color: "white",
-		display: "flex",
-		justifyContent: "center",
-		alignItems: "center",
-		cursor: "pointer",
-		zIndex: 1001,
-	};
+	// Updated toggle button style: now positioned inside the circle,
+  	// centered horizontally along the circle's vertical center axis and placed near the bottom.
+  	const toggleButtonStyle = {
+      	position: "absolute",
+      	bottom: "20px",      // 20px from the bottom of the circle
+      	left: "50%",
+      	transform: "translateX(-50%)",
+      	width: "36px",
+      	height: "36px",
+      	borderRadius: "50%",  // makes it a circle
+      	backgroundColor: "rgba(0, 0, 0, 0.06)",
+      	color: "darkgray",
+      	display: "flex",
+      	justifyContent: "center",
+      	alignItems: "center",
+      	cursor: "pointer",
+      	zIndex: 1001,
+  	};
 
 
 	// Event handlers bound to text fields, they use the passed properties functions
@@ -153,10 +155,10 @@ function SignalingClientPanel(props) {
 									primary={address}
 									style={listItemTextStyle}
 								></ListItemText>
-								<ListItemText
+								{/* <ListItemText
 									secondary={id}
 									style={listItemTextStyle}
-								></ListItemText>
+								></ListItemText> */}
 								<ListItemButton component="a">
 									<ListItemText
 										primary="Start"

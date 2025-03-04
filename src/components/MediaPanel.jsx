@@ -5,8 +5,8 @@ function MediaPanel(props) {
 
 	const componentStyle = {
         backgroundColor: "lightGrey",
-  		width: "750px",
-  		height: "750px",
+  		width: "850px",
+  		height: "850px",
   		borderRadius: "50%",
   		overflow: "hidden",
   		position: "fixed", // Changed from relative to fixed
@@ -19,8 +19,8 @@ function MediaPanel(props) {
 		position: "absolute",
   		top: "50%",
   		left: "50%",
-  		width: "750px",       // Force the video to be 750px wide
-  		height: "750px",      // Force the video to be 750px high
+  		width: "850px",       // Force the video to be 750px wide
+  		height: "850px",      // Force the video to be 750px high
   		transform: "translate(-50%, -50%) scaleX(-1)",
   		objectFit: "cover", 
     }
